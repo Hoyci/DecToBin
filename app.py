@@ -46,8 +46,9 @@ class BinToDec(QMainWindow):
 
     def BinToDec(self):
         try:
+            valor = bin((int(self.display1.text())))
             self.display2.setText(
-                str(bin((int(self.display1.text()))))
+                str(valor.replace('b', ''))
             )
         except Exception as e:
             self.display1.setText('Você digitou um valor inválido')
